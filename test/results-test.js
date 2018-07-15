@@ -9,7 +9,6 @@ chai.use(chaiHttp);
 describe('Results', () => {
   let results = chai.request.agent(app);
 
-
   it('shows the page title', () => {
     results
     .get('/results')

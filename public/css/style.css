@@ -2,26 +2,12 @@ body {
 
 }
 
-table {
-  width: 100%;
+h1, h4 {
+  text-align: center;
 }
 
-#td-summary{
-  width: 55%;
-}
-
-#td-image-ep {
-  width: 25%;
-}
-
-#td-title {
-  width: 10%;
-}
-
-#td-season {
-  width: 5%;
-}
-
-#td-number {
-  width: 5%;
+.image-box {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center;
 }

@@ -7,8 +7,10 @@
   </head>
   <body>
     <h1>All the <%= data.name %> episodes ( <%= data.premiered.substring(0,4) %> - now )</h1>
-    <p>Genre: <%= data.genres %></p>
-    <a href="<%= data.url %>" target="_blank"><img src="<%= data.image.original %>" alt=""></a>
+    <h4>Genre: <%= data.genres %></h4>
+    <div class="image-box">
+      <a href="<%= data.url %>" target="_blank"><img class="image" src="<%= data.image.original %>" alt=""></a>
+    </div>
 
     <h2>Episodes: </h2>
     <% data._embedded.episodes.forEach(function(episode){ %>
