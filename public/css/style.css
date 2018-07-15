@@ -1,0 +1,27 @@
+body {
+
+}
+
+table {
+  width: 100%;
+}
+
+#td-summary{
+  width: 55%;
+}
+
+#td-image-ep {
+  width: 25%;
+}
+
+#td-title {
+  width: 10%;
+}
+
+#td-season {
+  width: 5%;
+}
+
+#td-number {
+  width: 5%;
+}
