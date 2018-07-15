@@ -8,7 +8,7 @@ This is a simple app built with `express` that shows the episodes of the America
 
 ## My approach
 
-I created a express app from scratch, I used Chai and Mocha for the tests.
+I created a express app from scratch and I used Chai and Mocha for the tests.
 
 
 ## Instructions
