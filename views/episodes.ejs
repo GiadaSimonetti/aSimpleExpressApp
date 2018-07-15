@@ -3,8 +3,8 @@
   <head>
     <title>All the Silincon Valley episodes</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-
   </head>
+
   <body>
     <h1>All the <%= data.name %> episodes ( <%= data.premiered.substring(0,4) %> - now )</h1>
     <h4>Genre: <%= data.genres %></h4>
@@ -13,15 +13,16 @@
     </div>
 
     <h2>Episodes: </h2>
-    <% data._embedded.episodes.forEach(function(episode){ %>
-      <div class="ep-container" id="episode.id">
-        <h3><%= episode.name %></h3>
-        <img src="<%= episode.image.medium %>" alt="image_episode">
-        <strong><p>Season <%= episode.season %> Episode <%= episode.number %></p></strong>
-        <p><%= episode.summary.substring(3,episode.summary.length-4) %></p>
-        <hr>
-      </div>
-      <% }) %>
+    <div class="episode-container">
+      <% data._embedded.episodes.forEach(function(episode){ %>
+        <div class="episode">
+          <h3><%= episode.name %></h3>
+          <strong><p>Season <%= episode.season %> Episode <%= episode.number %></p></strong>
+          <img src="<%= episode.image.medium %>" alt="image_episode">
+          <p><%= episode.summary.substring(3,episode.summary.length-4) %></p>
+        </div>
+        <% }) %>
+    </div>
 
   </body>
 </html>

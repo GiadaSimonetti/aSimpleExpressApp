@@ -1,5 +1,20 @@
-body {
+* {
+  box-sizing: border-box
+}
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6;
+  color: #666;
+  background: #F6F6F6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 h1, h4 {
@@ -10,4 +25,38 @@ h1, h4 {
   display: flex;
   justify-content: center; /* align horizontal */
   align-items: center;
+}
+
+.episode-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.episode {
+  align-self: auto;
+  margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+  padding: 1rem;
+}
+
+.episode:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}
+
+@media screen and (min-width: 600px) {
+  .episode {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .episode {
+    flex: 1 1 calc(33% - 2rem);
+  }
 }

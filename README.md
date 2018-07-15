@@ -26,6 +26,7 @@ go to
 ```
 
 - to run the tests
+(only while the server is not running)
 
 ```sh
 
