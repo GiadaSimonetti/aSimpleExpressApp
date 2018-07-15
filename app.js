@@ -18,3 +18,5 @@ app.get("/results", (req, res) => {
 app.listen(3000, function(){
   console.log("Movie app has stearted!!!");
 });
+
+module.exports = app;
