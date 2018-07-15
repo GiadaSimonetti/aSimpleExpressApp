@@ -5,6 +5,35 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>All the Silincon Valley episodes</h1>
+    <h1>All the <%= data.name %> episodes</h1>
+    <p>Genre: <%= data.genres %></p>
+    <img src="<%= data.image.original %>" alt="">
+
+    <table style="width:100%" >
+      <tr>
+        <th>title</th>
+        <th>season</th>
+        <th>number</th>
+        <th>images</th>
+        <th>summary</th>
+      </tr>
+
+      <tr >
+        <% data._embedded.episodes.forEach(function(episode){ %>
+          <td><%= episode.name %></td>
+          <td><%= episode.season %></td>
+          <td><%= episode.number %></td>
+          <td><img src="<%= episode.image.medium %>" alt="image_episode"></td>
+          <td><%= episode.summary %></td>
+          <% }) %>
+      </tr>
+
+    </table>
+
+    <p><%= data._embedded.episodes[0].name %></p>
+
+    <br />
+    <a href="/">Search Again</a>
+
   </body>
 </html>
