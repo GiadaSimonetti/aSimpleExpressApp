@@ -1,5 +1,16 @@
 # aSimpleExpressApp
 
+This is a simple app built with `express` that shows the episodes of the American series Silicon Valley.
+
+
+![Silicon Valley](./public/1.png?raw=true)
+
+
+## My approach
+
+I created a express app from scratch, I used Chai and Mocha for the tests.
+
+
 ## Instructions
 
 Prerequisites
