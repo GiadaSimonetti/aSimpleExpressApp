@@ -7,17 +7,15 @@ app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + '/public'));
 
-app.get("/", (req, res) => {
-  res.render("search")
-});
 
-app.get("/results", (req, res) => {
+app.get("/episodes", (req, res) => {
+
   request("https://gist.githubusercontent.com/thekiwi/ab70294c8d7ab790d9b6d70df9d3d145/raw/14513c7b841b37b2406dda4d3b9143a25700a68e/silicon-valley.json", (error, response, body) => {
     if(!error && response.statusCode === 200 ){
       let data = JSON.parse(body);
-      res.render("results", { data: data})
+      res.render("episodes", { data: data});
     }
-  })
+  });
 });
 
 app.listen(3000, () => {

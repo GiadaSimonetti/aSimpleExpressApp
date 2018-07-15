@@ -6,17 +6,17 @@ let should = chai.should();
 chai.use(chaiHttp);
 
 
-describe('Results', () => {
-  let results = chai.request.agent(app);
+describe('Episodes', () => {
+  let episodes = chai.request.agent(app);
 
   let mockData = {
         season: '1',
         number: '1',
         name: 'mockTitle'
-      }
+      };
 
   beforeEach((done) => {
-    results
+    episodes
     .post('/code')
     .send(mockData)
     .end((err, res) => {
@@ -25,8 +25,8 @@ describe('Results', () => {
   });
 
   it('shows the page title', () => {
-    results
-    .get('/results')
+    episodes
+    .get('/episodes')
     .end((err, res) => {
       res.should.have.status(200);
       res.text.should.contain('All the Silincon Valley episodes');
@@ -34,8 +34,8 @@ describe('Results', () => {
   });
 
   it('shows the data from the JSON file', () => {
-    results
-    .get('/results')
+    episodes
+    .get('/episodes')
     .end((err, res) => {
       res.should.have.status(200);
       res.text.should.contain('mockTitle');

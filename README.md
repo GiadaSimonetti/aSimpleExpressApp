@@ -20,4 +20,15 @@ install dependencies:
 run the app:
   $ node app.js
 
+go to
+  $ http://localhost:3000/episodes
+
+```
+
+- to run the tests
+
+```sh
+
+npm test
+
 ```
